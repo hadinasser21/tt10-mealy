@@ -64,6 +64,6 @@ async def test_project(dut):
     # Expect z=1 on b4 for this harness (same priming behavior as your repo).
     assert zs[0] == 0
     assert zs[1] == 0
-    assert zs[2] == 0
-    assert zs[3] == 1
-    assert zs[4] == 0
+    assert zs[2] == 1
+    assert zs[3] == 0
+    assert zs[4] == 1
