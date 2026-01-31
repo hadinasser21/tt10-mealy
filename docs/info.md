@@ -9,7 +9,13 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This design is a Mealy FSM pattern detector for `101`.
+
+- Input `din` is sampled each clock.
+- The FSM tracks partial matches (`1`, then `10`).
+- When the sequence `101` is completed, `z` goes high immediately (same cycle as the last `1`).
+- Overlap is allowed (e.g., `10101` triggers twice).
+
 
 ## How to test
 
