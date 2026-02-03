@@ -53,8 +53,10 @@ module tt_um_nasser_hadi_mealy_101 (
     // Debug: expose state bits (optional)
     assign uo_out[2:1] = state;
 
-    // Unused outputs
-    assign uo_out[7:3] = 5'b0;
+    // Debug: expose din for easier waveform reading (Surfer-friendly)
+    assign uo_out[3]   = din;     // din debug bit
+    assign uo_out[7:4] = 4'b0;    // remaining unused
+
 
     assign uio_out = 8'b0;
     assign uio_oe  = 8'b0;
