@@ -7,11 +7,12 @@
 module tb ();
 
   // Dump the signals to a VCD file. You can view it with gtkwave or surfer.
-  initial begin
-    $dumpfile("tb.vcd");
-    $dumpvars(0, tb);
-    #1;
-  end
+initial begin
+  $dumpfile("tb.vcd");
+  $dumpvars(0, tb);
+  $dumpvars(0, tb.user_project); // ensures DUT internals dump
+end
+
 
   // Wire up the inputs and outputs:
   reg clk;
